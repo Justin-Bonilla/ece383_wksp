@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jan 15 23:08:14 2026
+# Process ID         : 22620
+# Current directory  : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/hw2
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent23884 C:\Users\C27Justin.Bonilla\ece383\ece383_wksp\hw2\Homework2.xpr
+# Log file           : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/hw2/vivado.log
+# Journal file       : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/hw2\vivado.jou
+# Running On         : C27-5CG3121F3M
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : AMD Ryzen 7 PRO 6850U with Radeon Graphics     
+# CPU Frequency      : 2695 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16442 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20737 MB
+# Available Virtual  : 3669 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/hw2/Homework2.xpr
+update_compile_order -fileset sources_1
