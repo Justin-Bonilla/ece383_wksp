@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="vga_log_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ece383_pkg" />
+            <top_module name="vga_log_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="19,999,999,998 ps"></ZoomStartTime>
+      <ZoomEndTime time="20,000,000,001 ps"></ZoomEndTime>
+      <Cursor1Time time="20,000,000,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/vga_log_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/position" type="array">
+      <obj_property name="ElementShortName">position</obj_property>
+      <obj_property name="ObjectShortName">position</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/vga" type="array">
+      <obj_property name="ElementShortName">vga</obj_property>
+      <obj_property name="ObjectShortName">vga</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/color" type="array">
+      <obj_property name="ElementShortName">color[23:0]</obj_property>
+      <obj_property name="ObjectShortName">color[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/trigger" type="array">
+      <obj_property name="ElementShortName">trigger</obj_property>
+      <obj_property name="ObjectShortName">trigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/ch1" type="array">
+      <obj_property name="ElementShortName">ch1</obj_property>
+      <obj_property name="ObjectShortName">ch1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/ch2" type="array">
+      <obj_property name="ElementShortName">ch2</obj_property>
+      <obj_property name="ObjectShortName">ch2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/red8" type="array">
+      <obj_property name="ElementShortName">red8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">red8[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/green8" type="array">
+      <obj_property name="ElementShortName">green8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">green8[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/blue8" type="array">
+      <obj_property name="ElementShortName">blue8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">blue8[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/LOG_FILENAME" type="array">
+      <obj_property name="ElementShortName">LOG_FILENAME[1:11]</obj_property>
+      <obj_property name="ObjectShortName">LOG_FILENAME[1:11]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_log_tb/RUN_TIME" type="other">
+      <obj_property name="ElementShortName">RUN_TIME</obj_property>
+      <obj_property name="ObjectShortName">RUN_TIME</obj_property>
+   </wvobject>
+</wave_config>

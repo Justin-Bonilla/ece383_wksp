@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/ece383_pkg.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/color_mapper.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/vga_log_tb.vhd" \
+
+# Do not sort compile order
+nosort
