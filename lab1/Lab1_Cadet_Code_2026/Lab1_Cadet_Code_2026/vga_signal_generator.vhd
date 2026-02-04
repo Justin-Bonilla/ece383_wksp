@@ -57,7 +57,7 @@ process(clk)
     begin
     if rising_edge(clk) then
 
-        -- defaults every pixel
+        
         h_sync_is_low  <= FALSE;
         v_sync_is_low  <= FALSE;
         h_blank_is_low <= FALSE;

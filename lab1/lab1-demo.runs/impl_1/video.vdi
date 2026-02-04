@@ -1,0 +1,95 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Feb  3 21:57:00 2026
+# Process ID         : 23336
+# Current directory  : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.runs/impl_1
+# Command line       : vivado.exe -log video.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source video.tcl -notrace
+# Log file           : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.runs/impl_1/video.vdi
+# Journal file       : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.runs/impl_1\vivado.jou
+# Running On         : C27-5CG3121F3M
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : AMD Ryzen 7 PRO 6850U with Radeon Graphics     
+# CPU Frequency      : 2695 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16442 MB
+# Swap memory        : 6526 MB
+# Total Virtual      : 22968 MB
+# Available Virtual  : 4408 MB
+#-----------------------------------------------------------
+source video.tcl -notrace
+Command: link_design -top video -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'mmcm_adv_inst_display_clocks'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 556.805 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'mmcm_adv_inst_display_clocks/inst'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'mmcm_adv_inst_display_clocks/inst'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'mmcm_adv_inst_display_clocks/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:54]
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1303.836 ; gain = 614.227
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'mmcm_adv_inst_display_clocks/inst'
+Parsing XDC File [C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.srcs/constrs_1/imports/lab1/Nexys-Video-Master.xdc]
+Finished Parsing XDC File [C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.srcs/constrs_1/imports/lab1/Nexys-Video-Master.xdc]
+Parsing XDC File [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc]
+WARNING: [Vivado 12-584] No ports matched 'btn[4]'. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[2]'. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[1]'. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[3]'. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[0]'. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'vga' instantiated as 'Inst_vga' [C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/video.vhdl:62]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1303.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  OBUFDS => OBUFDS: 4 instances
+
+10 Infos, 7 Warnings, 8 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1303.836 ; gain = 997.023
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'Inst_vga' of type 'vga' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+INFO: [Project 1-461] DRC finished with 1 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1303.836 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+15 Infos, 7 Warnings, 8 Critical Warnings and 2 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  3 21:57:41 2026...
