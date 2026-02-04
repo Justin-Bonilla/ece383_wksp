@@ -69,7 +69,7 @@ package ece383_pkg is
   -- The num_stepper takes input from a button and increments/decrements its register by delta based on the button presses
   component numeric_stepper is
   generic (
-    num_bits  : integer := 8;
+    num_bits  : integer := 11;
     max_value : integer := 127;
     min_value : integer := -128;
     delta     : integer := 10

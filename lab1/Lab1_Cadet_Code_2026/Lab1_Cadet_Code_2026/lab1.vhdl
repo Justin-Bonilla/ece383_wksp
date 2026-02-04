@@ -39,7 +39,7 @@ begin
 -- Add numeric steppers for time and voltage trigger
 timeStep : numeric_stepper
 generic map(
-      num_bits  => 8,
+      num_bits  => 11,
       max_value => 640,
       min_value => 0,
       delta => 10
@@ -54,7 +54,7 @@ generic map(
 
 voltStep : numeric_stepper
 generic map(
-      num_bits  => 8,
+      num_bits  => 11,
       max_value => 480,
       min_value => 0,
       delta => 10    
@@ -75,7 +75,7 @@ generic map(
        	
 -- Instantiate video
 
- video_inst : video
+ video_inst :  video
 port map (
   clk      => clk,
   reset_n  => reset_n,
@@ -91,5 +91,5 @@ ch1.active <= '1' when sw(0) = '1' and ch1.en = '1';
 ch2.active <= '1' when sw(1) = '1' and ch2.en = '1';
 
 -- Connect board hardware to signals
-	
+
 end structure;

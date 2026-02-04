@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Feb  4 07:34:31 2026
+# Process ID         : 4204
+# Current directory  : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.runs/impl_1
+# Command line       : vivado.exe -log lab1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lab1.tcl -notrace
+# Log file           : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.runs/impl_1/lab1.vdi
+# Journal file       : C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.runs/impl_1\vivado.jou
+# Running On         : C27-5CG3121F3M
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : AMD Ryzen 7 PRO 6850U with Radeon Graphics     
+# CPU Frequency      : 2695 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16442 MB
+# Swap memory        : 8464 MB
+# Total Virtual      : 24907 MB
+# Available Virtual  : 5007 MB
+#-----------------------------------------------------------
+source lab1.tcl -notrace
+Command: open_checkpoint lab1_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 289.684 ; gain = 4.988
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 538.953 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 635.238 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
