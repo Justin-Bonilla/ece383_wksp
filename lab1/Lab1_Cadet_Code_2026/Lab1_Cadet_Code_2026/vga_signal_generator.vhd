@@ -62,7 +62,7 @@ h_blank_is_low <= TRUE when current_pos.col >= 639 and current_pos.col < 799 els
                   FALSE;
 --V BLANK WORKS GOOD
 v_blank_is_low <= TRUE when (current_pos.row = 479 and current_pos.col = 799) 
-                         or (current_pos.row > 479 and current_pos.row < 525) -- !!!!!! original is 524
+                         or (current_pos.row > 479 and current_pos.row < 524) or (current_pos.row = 524 and current_pos.col <799) -- !!!!!! original is 524
                    else FALSE;
 
 --Horizontal sync comparison, GOOD

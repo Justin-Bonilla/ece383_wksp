@@ -20,6 +20,7 @@ end vga;
 
 architecture vga_arch of vga is
 		signal current_pos : coordinate_t;
+		
 	
 begin
 
@@ -27,13 +28,16 @@ vga_sig_gen : vga_signal_generator
 port map(
     clk      => clk,
     reset_n  => reset_n,
-    position => pixel.coordinate,
+    position => current_pos,
     vga      => vga
 );
 
+pixel.coordinate <= current_pos;
+--pixel_position <= current_pos;
+
 col_map : color_mapper
 port map(  color => pixel.color,
-           position => current_pos,
+           position => current_pos, --pixel_position,
 		   trigger => trigger,
            ch1 => ch1,
            ch2 => ch2

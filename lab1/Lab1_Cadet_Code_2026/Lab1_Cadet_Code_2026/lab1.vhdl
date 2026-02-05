@@ -87,8 +87,11 @@ port map (
   ch2      => ch2
 );
 -- Determine if ch1 and or ch2 are active
-ch1.active <= '1' when sw(0) = '1' and ch1.en = '1';
-ch2.active <= '1' when sw(1) = '1' and ch2.en = '1';
+ch1.en <= '1' when sw(0) = '1' else '0';
+ch2.en <= '1' when sw(1) = '1' else '0';
+
+ch1.active <= '1' when position.col = position.row else '0';
+ch2.active <= '1' when position.row = (440 - position.col) else '0';
 
 -- Connect board hardware to signals
 led <= (others => '1');

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Wed Feb  4 23:40:31 2026
+| Date             : Thu Feb  5 14:56:09 2026
 | Host             : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command          : report_power -file lab1_power_routed.rpt -pb lab1_power_summary_routed.pb -rpx lab1_power_routed.rpx
 | Design           : lab1
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.381        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.241        |
+| Dynamic (W)              | 0.242        |
 | Device Static (W)        | 0.140        |
 | Effective TJA (C/W)      | 3.3          |
 | Max Ambient (C)          | 83.7         |
@@ -53,11 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      193 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       55 |    133800 |            0.04 |
-|   Register     |    <0.001 |       93 |    267600 |            0.03 |
-|   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |    <0.001 |      126 |       --- |             --- |
+| Slice Logic    |    <0.001 |      696 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      396 |    133800 |            0.30 |
+|   CARRY4       |    <0.001 |       68 |     33450 |            0.20 |
+|   Register     |    <0.001 |      101 |    267600 |            0.04 |
+|   Others       |     0.000 |       16 |       --- |             --- |
+| Signals        |    <0.001 |      511 |       --- |             --- |
 | MMCM           |     0.106 |        1 |        10 |           10.00 |
 | I/O            |     0.133 |       15 |       285 |            5.26 |
 | Static Power   |     0.140 |          |           |                 |
@@ -71,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.034 |       0.003 |      0.031 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.035 |       0.004 |      0.031 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.089 |       0.059 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.045 |       0.040 |      0.005 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -143,8 +144,8 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| lab1                             |     0.241 |
-|   video_inst                     |     0.241 |
+| lab1                             |     0.242 |
+|   video_inst                     |     0.242 |
 |     inst_dvid                    |     0.001 |
 |     mmcm_adv_inst_display_clocks |     0.107 |
 |       inst                       |     0.107 |

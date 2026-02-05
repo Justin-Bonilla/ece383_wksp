@@ -58,7 +58,6 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tsbg484-1
 
@@ -91,7 +90,7 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/color_mapper.vhd
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/vga_signal_generator.vhd
 }
-read_ip -quiet c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]

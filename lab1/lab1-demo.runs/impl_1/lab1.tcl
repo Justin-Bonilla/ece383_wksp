@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -124,7 +123,7 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.runs/synth_1/lab1.dcp
-  read_ip -quiet c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.srcs/constrs_1/imports/lab1/Nexys-Video-Master.xdc
   read_xdc C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc
