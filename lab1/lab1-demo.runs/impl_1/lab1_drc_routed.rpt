@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Feb  4 20:56:37 2026
+| Date         : Wed Feb  4 22:14:38 2026
 | Host         : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command      : report_drc -file lab1_drc_routed.rpt -pb lab1_drc_routed.pb -rpx lab1_drc_routed.rpx
 | Design       : lab1
@@ -24,18 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 1
-+----------+----------+-------------------+--------+
-| Rule     | Severity | Description       | Checks |
-+----------+----------+-------------------+--------+
-| PDRC-153 | Warning  | Gated clock check | 1      |
-+----------+----------+-------------------+--------+
+             Checks found: 0
++------+----------+-------------+--------+
+| Rule | Severity | Description | Checks |
++------+----------+-------------+--------+
++------+----------+-------------+--------+
 
 2. REPORT DETAILS
 -----------------
-PDRC-153#1 Warning
-Gated clock check  
-Net video_inst/Inst_vga/vga_sig_gen/col_counter/v_blank_is_low0 is a gated clock net sourced by a combinational pin video_inst/Inst_vga/vga_sig_gen/col_counter/v_blank_is_low_reg_i_1/O, cell video_inst/Inst_vga/vga_sig_gen/col_counter/v_blank_is_low_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
 

@@ -58,8 +58,11 @@ generic map(
 position <= current_pos;
 h_blank_is_low <= TRUE when current_pos.col >= 639 and current_pos.col < 799 else
                   FALSE;
-v_blank_is_low <= TRUE when (current_pos.row = 479 and current_pos.col = 799) or (current_pos.row > 479 and current_pos.row < 524)  else
-                  FALSE when (current_pos.row = 524 and current_pos.col = 799);
+--v_blank_is_low <= TRUE when (current_pos.row = 479 and current_pos.col = 799) or (current_pos.row > 479 and current_pos.row < 524)  else
+                 -- FALSE when (current_pos.row = 524 and current_pos.col = 799);
+v_blank_is_low <= TRUE when (current_pos.row = 479 and current_pos.col = 799) 
+                         or (current_pos.row > 479 and current_pos.row < 524)
+                   else FALSE;
 
 
 
