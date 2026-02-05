@@ -91,5 +91,6 @@ ch1.active <= '1' when sw(0) = '1' and ch1.en = '1';
 ch2.active <= '1' when sw(1) = '1' and ch2.en = '1';
 
 -- Connect board hardware to signals
+led <= (others => '1');
 
 end structure;
