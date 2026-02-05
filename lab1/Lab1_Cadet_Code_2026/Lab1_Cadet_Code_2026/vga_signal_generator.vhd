@@ -56,14 +56,28 @@ generic map(
 -- END OF THE COUNTERS 
 
 position <= current_pos;
+
+--H BLANK WORKS GOOD
 h_blank_is_low <= TRUE when current_pos.col >= 639 and current_pos.col < 799 else
                   FALSE;
---v_blank_is_low <= TRUE when (current_pos.row = 479 and current_pos.col = 799) or (current_pos.row > 479 and current_pos.row < 524)  else
-                 -- FALSE when (current_pos.row = 524 and current_pos.col = 799);
+--V BLANK WORKS GOOD
 v_blank_is_low <= TRUE when (current_pos.row = 479 and current_pos.col = 799) 
-                         or (current_pos.row > 479 and current_pos.row < 524)
+                         or (current_pos.row > 479 and current_pos.row < 525) -- !!!!!! original is 524
                    else FALSE;
 
+--Horizontal sync comparison, GOOD
+--       if (current_pos.col >= 655) and (current_pos.col < 751) then
+--            h_sync_is_low <= TRUE;
+--        end if;
+h_sync_is_low <= TRUE when (current_pos.col >= 656) and (current_pos.col < 752) else
+                 FALSE;
+
+--Vertical sync comparison, BAD
+--        if (current_pos.row >= 489) and (current_pos.row < 492) then
+--            v_sync_is_low <= TRUE;
+--        end if;
+v_sync_is_low <= TRUE when (current_pos.row > 489 and current_pos.row < 492) or (current_pos.row = 490 and current_pos.col = 799) else
+                 FALSE;
 
 
 process(clk)
@@ -71,26 +85,38 @@ process(clk)
     if rising_edge(clk) then
 
         
-        h_sync_is_low  <= FALSE;
-        v_sync_is_low  <= FALSE;
+        --h_sync_is_low  <= FALSE;
+        --v_sync_is_low  <= FALSE;
         --h_blank_is_low <= FALSE;
         --v_blank_is_low <= FALSE;
 
         -- Horizontal sync comparison, GOOD
-        if (current_pos.col >= 655) and (current_pos.col < 751) then
-            h_sync_is_low <= TRUE;
-        end if;
+--        if (current_pos.col >= 655) and (current_pos.col < 751) then
+--            h_sync_is_low <= TRUE;
+--        end if;
         
-        -- Vertical sync comparison, GOOD
-        if (current_pos.row >= 489) and (current_pos.row < 492) then
-            v_sync_is_low <= TRUE;
-        end if;
+--        -- Vertical sync comparison, BAD
+--        if (current_pos.row >= 489) and (current_pos.row < 492) then
+--            v_sync_is_low <= TRUE;
+--        end if;
 
         if (h_blank_is_low = TRUE or v_blank_is_low = TRUE) then
             vga.blank <= '1';
         else
             vga.blank <= '0';
         end if;
+        
+--        if (h_sync_is_low = TRUE) then
+--            vga.hsync <= '1';
+--        else
+--            vga.blank <= '0';
+--        end if;
+        
+--        if (v_sync_is_low = TRUE) then
+--            vga.vsync <= '1';
+--        else
+--            vga.blank <= '0';
+--        end if;
         
         
             
