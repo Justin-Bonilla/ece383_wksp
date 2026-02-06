@@ -98,8 +98,7 @@ is_vertical_hash <= TRUE when
     (abs(to_integer(position.row) - center_row) mod hash_vertical_spacing) = 0 and
     is_within_grid
 else FALSE;
--- is_horizontal_hash <= TRUE when((position.col mod hash_horizontal_spacing) = 0) and position.row
--- For the horizontal and vertical hash I need to do an absolute value +- the space where the hash should be. Similar to volt_time
+
 
 
 

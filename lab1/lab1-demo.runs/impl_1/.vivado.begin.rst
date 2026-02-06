@@ -28,3 +28,13 @@
     <Process Command="vivado.bat" Owner="C27Justin.Bonilla" Host="C27-5CG3121F3M" Pid="35092" HostCore="16" HostMemory="016442740736">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="C27Justin.Bonilla" Host="C27-5CG3121F3M" Pid="8368" HostCore="16" HostMemory="016442740736">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="C27Justin.Bonilla" Host="C27-5CG3121F3M" Pid="35776" HostCore="16" HostMemory="016442740736">
+    </Process>
+</ProcessHandle>

@@ -27,10 +27,10 @@ architecture structure of lab1 is
     constant RIGHT : integer := 3;
     constant UP : integer := 4;
 
-    signal trigger: trigger_t;
-	signal pixel: pixel_t;
-	signal ch1, ch2: channel_t;
-	signal time_trigger_value, volt_trigger_value : signed(10 downto 0);
+    signal trigger: trigger_t; -- used
+	signal pixel: pixel_t; -- not used
+	signal ch1, ch2: channel_t; -- used
+	signal time_trigger_value, volt_trigger_value : signed(10 downto 0); -- used
 	--signal time_trigger_value, volt_trigger_value : unsigned(10 downto 0);
 	signal position: coordinate_t;
 
@@ -77,14 +77,14 @@ generic map(
 
  video_inst :  video
 port map (
-  clk      => clk,
-  reset_n  => reset_n,
-  tmds     => tmds,
-  tmdsb    => tmdsb,
-  trigger  => trigger,
-  position => position,
-  ch1      => ch1,
-  ch2      => ch2
+  clk      => clk, -- Just the normal clock signal
+  reset_n  => reset_n, -- Just the normal reset_n signal
+  tmds     => tmds, -- Dont need to worry about
+  tmdsb    => tmdsb, -- Dont need to worry about
+  trigger  => trigger, -- Taken care of in the numeric counters
+  position => position, 
+  ch1      => ch1, -- Taken care of in combinational logic
+  ch2      => ch2 -- Taken care of in combinational logic
 );
 -- Determine if ch1 and or ch2 are active
 ch1.en <= '1' when sw(0) = '1' else '0';

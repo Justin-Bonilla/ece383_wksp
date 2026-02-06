@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Thu Feb  5 14:56:09 2026
+| Date             : Thu Feb  5 17:24:51 2026
 | Host             : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command          : report_power -file lab1_power_routed.rpt -pb lab1_power_summary_routed.pb -rpx lab1_power_routed.rpx
 | Design           : lab1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.381        |
+| Total On-Chip Power (W)  | 0.382        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.242        |
+| Dynamic (W)              | 0.243        |
 | Device Static (W)        | 0.140        |
 | Effective TJA (C/W)      | 3.3          |
 | Max Ambient (C)          | 83.7         |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      696 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      396 |    133800 |            0.30 |
-|   CARRY4       |    <0.001 |       68 |     33450 |            0.20 |
+| Clocks         |     0.003 |        6 |       --- |             --- |
+| Slice Logic    |    <0.001 |      713 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      415 |    133800 |            0.31 |
+|   CARRY4       |    <0.001 |       70 |     33450 |            0.21 |
 |   Register     |    <0.001 |      101 |    267600 |            0.04 |
-|   Others       |     0.000 |       16 |       --- |             --- |
-| Signals        |    <0.001 |      511 |       --- |             --- |
+|   Others       |     0.000 |       18 |       --- |             --- |
+| Signals        |    <0.001 |      522 |       --- |             --- |
 | MMCM           |     0.106 |        1 |        10 |           10.00 |
 | I/O            |     0.133 |       15 |       285 |            5.26 |
 | Static Power   |     0.140 |          |           |                 |
-| Total          |     0.381 |          |           |                 |
+| Total          |     0.382 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.035 |       0.004 |      0.031 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.036 |       0.004 |      0.031 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.089 |       0.059 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.045 |       0.040 |      0.005 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,9 +144,9 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| lab1                             |     0.242 |
-|   video_inst                     |     0.242 |
-|     inst_dvid                    |     0.001 |
+| lab1                             |     0.243 |
+|   video_inst                     |     0.243 |
+|     inst_dvid                    |     0.002 |
 |     mmcm_adv_inst_display_clocks |     0.107 |
 |       inst                       |     0.107 |
 +----------------------------------+-----------+

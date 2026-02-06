@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Feb  5 14:54:32 2026
+| Date         : Thu Feb  5 17:22:36 2026
 | Host         : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab1_control_sets_placed.rpt
 | Design       : lab1
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              57 |           14 |
+| No           | No                    | No                     |              57 |           19 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              34 |           13 |
+| No           | Yes                   | No                     |              34 |           15 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              10 |            6 |
+| Yes          | Yes                   | No                     |              10 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,13 +73,13 @@ Table of Contents
 +--------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
 |                      Clock Signal                      |                   Enable Signal                  |                          Set/Reset Signal                          | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  | video_inst/inst_dvid/shift_red[7]_i_1_n_0                          |                2 |              5 |         2.50 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  | video_inst/inst_dvid/shift_red[9]_i_1_n_0                          |                2 |              6 |         3.00 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  | video_inst/inst_dvid/shift_red[7]_i_1_n_0                          |                1 |              5 |         5.00 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  | video_inst/inst_dvid/shift_red[9]_i_1_n_0                          |                5 |              6 |         1.20 |
 |  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                  | video_inst/Inst_vga/vga_sig_gen/col_counter/processQ[9]_i_1__0_n_0 |                4 |             10 |         2.50 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/Inst_vga/vga_sig_gen/col_counter/E[0] | video_inst/Inst_vga/vga_sig_gen/row_counter/processQ[9]_i_1_n_0    |                6 |             10 |         1.67 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/Inst_vga/vga_sig_gen/col_counter/E[0] | video_inst/Inst_vga/vga_sig_gen/row_counter/processQ[9]_i_1_n_0    |                4 |             10 |         2.50 |
 |  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                  | video_inst/Inst_vga/vga_sig_gen/vga_reg[blank]_0                   |                5 |             13 |         2.60 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                  |                                                                    |                7 |             28 |         4.00 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  |                                                                    |                7 |             29 |         4.14 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                  |                                                                    |               13 |             28 |         2.15 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  |                                                                    |                6 |             29 |         4.83 |
 +--------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
 
 
