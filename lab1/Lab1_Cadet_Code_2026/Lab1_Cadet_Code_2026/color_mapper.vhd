@@ -84,9 +84,9 @@ is_trigger_volt <= TRUE when
       4 - (4 - (position.col - grid_start_col))
     )
 else FALSE;
-is_ch1_line <= TRUE when (ch1.en = '1' and ch1.active = '1')
+is_ch1_line <= TRUE when (ch1.en = '1' and ch1.active = '1') and is_within_grid
 else FALSE;
-is_ch2_line <= TRUE when (ch2.en = '1' and ch2.active = '1')
+is_ch2_line <= TRUE when (ch2.en = '1' and ch2.active = '1') and is_within_grid
 else FALSE;
 is_horizontal_hash <= TRUE when
     abs(to_integer(position.row) - center_row) <= 4 and

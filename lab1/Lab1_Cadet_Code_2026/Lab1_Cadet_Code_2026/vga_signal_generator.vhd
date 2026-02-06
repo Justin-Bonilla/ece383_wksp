@@ -65,17 +65,13 @@ v_blank_is_low <= TRUE when (current_pos.row = 479 and current_pos.col = 799)
                          or (current_pos.row > 479 and current_pos.row < 524) or (current_pos.row = 524 and current_pos.col <799) -- !!!!!! original is 524
                    else FALSE;
 
---Horizontal sync comparison, GOOD
---       if (current_pos.col >= 655) and (current_pos.col < 751) then
---            h_sync_is_low <= TRUE;
---        end if;
+--Horizontal sync comparison, Works
+
 h_sync_is_low <= TRUE when (current_pos.col >= 656) and (current_pos.col < 752) else
                  FALSE;
 
---Vertical sync comparison, BAD
---        if (current_pos.row >= 489) and (current_pos.row < 492) then
---            v_sync_is_low <= TRUE;
---        end if;
+--Vertical sync comparison, Works
+
 v_sync_is_low <= TRUE when (current_pos.row > 489 and current_pos.row < 492) or (current_pos.row = 490 and current_pos.col = 799) else
                  FALSE;
 
@@ -84,43 +80,13 @@ process(clk)
     begin
     if rising_edge(clk) then
 
-        
-        --h_sync_is_low  <= FALSE;
-        --v_sync_is_low  <= FALSE;
-        --h_blank_is_low <= FALSE;
-        --v_blank_is_low <= FALSE;
-
-        -- Horizontal sync comparison, GOOD
---        if (current_pos.col >= 655) and (current_pos.col < 751) then
---            h_sync_is_low <= TRUE;
---        end if;
-        
---        -- Vertical sync comparison, BAD
---        if (current_pos.row >= 489) and (current_pos.row < 492) then
---            v_sync_is_low <= TRUE;
---        end if;
 
         if (h_blank_is_low = TRUE or v_blank_is_low = TRUE) then
             vga.blank <= '1';
         else
             vga.blank <= '0';
         end if;
-        
---        if (h_sync_is_low = TRUE) then
---            vga.hsync <= '1';
---        else
---            vga.blank <= '0';
---        end if;
-        
---        if (v_sync_is_low = TRUE) then
---            vga.vsync <= '1';
---        else
---            vga.blank <= '0';
---        end if;
-        
-        
-            
-       
+
     end if;
 end process;
 

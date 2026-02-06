@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Feb  5 17:24:45 2026
+| Date         : Thu Feb  5 18:36:16 2026
 | Host         : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command      : report_drc -file lab1_drc_routed.rpt -pb lab1_drc_routed.pb -rpx lab1_drc_routed.rpx
 | Design       : lab1
@@ -24,12 +24,35 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 0
-+------+----------+-------------+--------+
-| Rule | Severity | Description | Checks |
-+------+----------+-------------+--------+
-+------+----------+-------------+--------+
+             Checks found: 4
++----------+----------+----------------------------+--------+
+| Rule     | Severity | Description                | Checks |
++----------+----------+----------------------------+--------+
+| PDRC-136 | Warning  | SLICE_PairEqSame_C6C5_WARN | 1      |
+| PDRC-138 | Warning  | SLICE_PairEqSame_D6D5_WARN | 1      |
+| PDRC-153 | Warning  | Gated clock check          | 2      |
++----------+----------+----------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
+PDRC-136#1 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X157Y149 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#1 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X161Y149 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net timeStep/q_reg[10]_i_1_n_0 is a gated clock net sourced by a combinational pin timeStep/q_reg[10]_i_1/O, cell timeStep/q_reg[10]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net voltStep/q_reg[10]_i_1__0_n_0 is a gated clock net sourced by a combinational pin voltStep/q_reg[10]_i_1__0/O, cell voltStep/q_reg[10]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
 
