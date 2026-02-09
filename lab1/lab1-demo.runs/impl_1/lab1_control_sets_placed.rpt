@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Feb  5 18:34:07 2026
+| Date         : Sun Feb  8 23:17:01 2026
 | Host         : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab1_control_sets_placed.rpt
 | Design       : lab1
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    13 |
-|    Minimum number of control sets                        |    13 |
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    63 |
+| Unused register locations in slices containing registers |    43 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,12 +39,12 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    13 |
-| >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     1 |
+| Total control sets |    10 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     6 |
+| >= 10 to < 12      |     4 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
 | >= 16              |     2 |
@@ -58,34 +58,31 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              76 |           21 |
+| No           | No                    | No                     |              56 |           15 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              35 |           12 |
-| Yes          | No                    | No                     |               4 |            2 |
+| No           | Yes                   | No                     |              39 |           17 |
+| Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              30 |           10 |
+| Yes          | Yes                   | No                     |              30 |           12 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------------------------------+---------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
-|                      Clock Signal                      |                   Enable Signal                   |                          Set/Reset Signal                          | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------------------------------+---------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF                                              | timeStep/is_increment                             |                                                                    |                1 |              2 |         2.00 |
-|  clk_IBUF                                              | voltStep/is_increment                             |                                                                    |                1 |              2 |         2.00 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                   | video_inst/inst_dvid/shift_red[7]_i_1_n_0                          |                1 |              5 |         5.00 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                   | video_inst/inst_dvid/shift_red[9]_i_1_n_0                          |                2 |              6 |         3.00 |
-|  clk_IBUF                                              | video_inst/Inst_vga/vga_sig_gen/row_counter/SR[0] | timeStep/process_q[10]_i_1_n_0                                     |                2 |             10 |         5.00 |
-|  clk_IBUF                                              | video_inst/Inst_vga/vga_sig_gen/row_counter/SR[0] | voltStep/process_q[10]_i_1__0_n_0                                  |                2 |             10 |         5.00 |
-|  timeStep/q_reg[10]_i_1_n_0                            |                                                   |                                                                    |                3 |             10 |         3.33 |
-|  voltStep/q_reg[10]_i_1__0_n_0                         |                                                   |                                                                    |                5 |             10 |         2.00 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                   | video_inst/Inst_vga/vga_sig_gen/col_counter/processQ[9]_i_1__0_n_0 |                4 |             10 |         2.50 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/Inst_vga/vga_sig_gen/col_counter/E[0]  | video_inst/Inst_vga/vga_sig_gen/row_counter/SR[0]                  |                6 |             10 |         1.67 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                   | video_inst/Inst_vga/vga_sig_gen/vga_reg[blank]_0                   |                5 |             14 |         2.80 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                   |                                                                    |                8 |             27 |         3.38 |
-|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                   |                                                                    |                5 |             29 |         5.80 |
-+--------------------------------------------------------+---------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
++--------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
+|                      Clock Signal                      |                   Enable Signal                  |                          Set/Reset Signal                          | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF                                              |                                                  | voltStep/SR[0]                                                     |                3 |              4 |         1.33 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  | video_inst/inst_dvid/shift_red[7]_i_1_n_0                          |                1 |              5 |         5.00 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  | video_inst/inst_dvid/shift_red[9]_i_1_n_0                          |                4 |              6 |         1.50 |
+|  clk_IBUF                                              | timeStep/process_q[10]_i_1_n_0                   | voltStep/SR[0]                                                     |                3 |             10 |         3.33 |
+|  clk_IBUF                                              | voltStep/process_q[10]_i_1__0_n_0                | voltStep/SR[0]                                                     |                3 |             10 |         3.33 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                  | video_inst/Inst_vga/vga_sig_gen/col_counter/processQ[9]_i_1__0_n_0 |                5 |             10 |         2.00 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 | video_inst/Inst_vga/vga_sig_gen/col_counter/E[0] | voltStep/SR[0]                                                     |                6 |             10 |         1.67 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                  | video_inst/Inst_vga/vga_sig_gen/vga_reg[blank]_0                   |                4 |             14 |         3.50 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out1 |                                                  |                                                                    |                9 |             27 |         3.00 |
+|  video_inst/mmcm_adv_inst_display_clocks/inst/clk_out2 |                                                  |                                                                    |                6 |             29 |         4.83 |
++--------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------------------+------------------+----------------+--------------+
 
 

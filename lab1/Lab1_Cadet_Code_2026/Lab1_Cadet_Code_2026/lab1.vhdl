@@ -46,7 +46,7 @@ generic map(
     )
     port map( clk => clk,
            reset_n => reset_n,
-           en => sw(0),
+           en => '1', -- was sw(0)
            up => btn(RIGHT),
            down => btn(LEFT),
            q => time_trigger_value
@@ -61,7 +61,7 @@ generic map(
       )
     port map( clk => clk,
            reset_n => reset_n,
-           en => sw(1),
+           en => '1', --was sw(1)
            up => btn(UP),
            down => btn(DOWN),
            q => volt_trigger_value

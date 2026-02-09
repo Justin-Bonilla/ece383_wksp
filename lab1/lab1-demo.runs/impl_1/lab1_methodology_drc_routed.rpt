@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Feb  5 18:36:21 2026
+| Date         : Sun Feb  8 23:19:12 2026
 | Host         : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lab1_methodology_drc_routed.rpt -pb lab1_methodology_drc_routed.pb -rpx lab1_methodology_drc_routed.rpx
 | Design       : lab1
@@ -23,28 +23,26 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 48
+             Checks found: 27
 +-----------+------------------+------------------------------------------------------------------+--------+
 | Rule      | Severity         | Description                                                      | Checks |
 +-----------+------------------+------------------------------------------------------------------+--------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 24     |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1      |
 | CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1      |
-| TIMING-20 | Warning          | Non-clocked latch                                                | 20     |
 | XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten                | 1      |
-| LATCH-1   | Advisory         | Existing latches in the design                                   | 1      |
 +-----------+------------------+------------------------------------------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-17#1 Critical Warning
 Non-clocked sequential cell  
-The clock pin timeStep/is_decrement_reg/C is not reached by a timing clock
+The clock pin timeStep/prev_down_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Critical Warning
 Non-clocked sequential cell  
-The clock pin timeStep/is_increment_reg/C is not reached by a timing clock
+The clock pin timeStep/prev_up_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Critical Warning
@@ -99,12 +97,12 @@ Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin voltStep/is_decrement_reg/C is not reached by a timing clock
+The clock pin voltStep/prev_down_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin voltStep/is_increment_reg/C is not reached by a timing clock
+The clock pin voltStep/prev_up_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
@@ -167,116 +165,11 @@ Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads
 Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_IBUF_inst/O, timeStep/clk, video_inst/clk, voltStep/clk
 Related violations: <none>
 
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[10] cannot be properly analyzed as its control pin timeStep/q_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[1] cannot be properly analyzed as its control pin timeStep/q_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[2] cannot be properly analyzed as its control pin timeStep/q_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[3] cannot be properly analyzed as its control pin timeStep/q_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#5 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[4] cannot be properly analyzed as its control pin timeStep/q_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[5] cannot be properly analyzed as its control pin timeStep/q_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[6] cannot be properly analyzed as its control pin timeStep/q_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#8 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[7] cannot be properly analyzed as its control pin timeStep/q_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#9 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[8] cannot be properly analyzed as its control pin timeStep/q_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#10 Warning
-Non-clocked latch  
-The latch timeStep/q_reg[9] cannot be properly analyzed as its control pin timeStep/q_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#11 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[10] cannot be properly analyzed as its control pin voltStep/q_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#12 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[1] cannot be properly analyzed as its control pin voltStep/q_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#13 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[2] cannot be properly analyzed as its control pin voltStep/q_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#14 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[3] cannot be properly analyzed as its control pin voltStep/q_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#15 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[4] cannot be properly analyzed as its control pin voltStep/q_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#16 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[5] cannot be properly analyzed as its control pin voltStep/q_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#17 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[6] cannot be properly analyzed as its control pin voltStep/q_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#18 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[7] cannot be properly analyzed as its control pin voltStep/q_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#19 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[8] cannot be properly analyzed as its control pin voltStep/q_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#20 Warning
-Non-clocked latch  
-The latch voltStep/q_reg[9] cannot be properly analyzed as its control pin voltStep/q_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
 XDCC-2#1 Warning
 Scoped Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on reset_n overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
 New Source: C:/Users/C27Justin.Bonilla/Downloads/Lab1.xdc (Line: 38)
 Previous Source: c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/lab1-demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc (Line: 4)
-Related violations: <none>
-
-LATCH-1#1 Advisory
-Existing latches in the design  
-There are 20 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 
