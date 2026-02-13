@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Homework_7/button_debounce.vhdl" \
+"../../../../Homework_7/lec10.vhdl" \
+"../../../../Homework_7/hw07_tb.vhdl" \
+
+# Do not sort compile order
+nosort

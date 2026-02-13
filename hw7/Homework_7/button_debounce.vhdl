@@ -30,7 +30,12 @@ architecture behavior of button_debounce is
 	
 	signal cw: STD_LOGIC_VECTOR(1 downto 0):= (others => '0');
 	signal sw: STD_LOGIC:= '0';
-	type state_type is ( *** put states here ***);
+	type state_type is (Action_0,
+	Comp_1,
+	debounce_1,
+	Comp_2,
+	debounce_2,
+	action_1);
 	signal state: state_type;
 	
 	COMPONENT lec10    -- clock for 20 msec debounce delay
@@ -43,26 +48,27 @@ architecture behavior of button_debounce is
     END COMPONENT;
 	
 	-- these values are for 100KHz
-    signal D : unsigned(*** size for 20ms with 100KHz clock*** downto 0) := (others => '0');
-    signal Q : unsigned(*** size for 20ms with 100KHz clock*** downto 0);
+    signal D : unsigned(10 downto 0) := (others => '0');
+    signal Q : unsigned(10 downto 0);
         
 begin
     ----------------------------------------------------------------------
 	--   DATAPATH
 	----------------------------------------------------------------------
 	delay_counter: lec10 
-    Generic map( *** what size is needed with a 100KHz clock to count for 20 ms? ***)
+    Generic map(11)
 	PORT MAP (
           clk => clk,
           reset => reset,
-		  crtl => ***put signal here ***,
-          D => ***put signal here ***,
-          Q => ***put signal here ***
+		  crtl => cw,
+          D => D,
+          Q => Q
         );	
 	
 	-- reminder: counter counter every other clock cycle!
    	-- these values are for 100KHz clock
-    less <= *** put code here for comparator ***
+    sw <= '1' when Q <= 2000 else
+            '0';
     
    -----------------------------------------------------------------------
    --    CONTROL UNIT
@@ -71,15 +77,30 @@ begin
 	 begin
 		if (rising_edge(clk)) then
 			if (reset = '0') then 
-				state <= Init0;
+				state <= Action_0;
 			else
 				case state is
-					when Init0 =>
-						state <= Comp1;
-					when Comp1 =>
-						if (button = '1') then state <= Init2; end if;
-					when Init2 =>
-						*** put other state transitions here ***  					
+					when Action_0 => 
+						state <= Comp_1;
+					when Comp_1 => 
+						if (button = '1') then state <= debounce_1;
+						else state<= Comp_1; 
+						end if;
+					when debounce_1 =>
+					   	if(sw = '0') then state <= Comp_2;
+					   	else state <= debounce_1;
+					   	end if;
+					when Comp_2 =>
+					   	if (button = '0') then state <= debounce_2;
+					   	else state <= Comp_2;
+					   	 end if;
+					when debounce_2 =>
+					   	if(sw = '0') then state <= action_1;
+					   	else state <= debounce_2;
+					   	 end if;
+					when action_1 =>
+					   	state <= Comp_1;
+					
 				end case;
 			end if;
 		end if;
@@ -91,10 +112,13 @@ begin
 	--	
 	--		cw is counter control:  00 is hold; 01 is increment; 11 is reset	
 	------------------------------------------------------------------------------	
-	cw <=   "00" when state = Init0 else
-			"00" when state = Comp1 else
-			*** finish output table ***
+	cw <=   "00" when state = Action_0 else
+			"11" when state = Comp_1 else
+			"01" when state = debounce_1 else
+			"11" when state = Comp_2 else
+			"01" when state = debounce_2 else
+			"00" when state = action_1;
 				
-	action <= '1' when state = *** which state? *** else '0';
+	action <= '1' when state = action_1 else '0';
 	
 end behavior;
