@@ -1,0 +1,4 @@
+set_property SRC_FILE_INFO {cfile:c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc rfile:../../../lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+current_instance inst
+set_property src_info {type:SCOPED_XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.100
