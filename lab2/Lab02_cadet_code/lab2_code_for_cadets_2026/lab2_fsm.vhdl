@@ -28,8 +28,17 @@ end lab2_fsm;
 
 architecture Behavioral of lab2_fsm is
 
---	type state_type is NEED_SOMETHING_HERE;
---	signal state: state_type;
+	type state_type is (
+	trig_detect,
+	write_def,
+	write_lt,
+	ready0,
+	write1,
+	write0,
+	ready1
+	);
+	signal state: state_type;
+	
 
 begin
 
@@ -40,13 +49,35 @@ begin
 	state_proces: process(clk)  
 	begin
 		if (rising_edge(clk)) then
---			if (reset_n = '0') then 
---				state <= NEED_SOMETHING_HERE;
---			else 
---				case state is
---					when NEED_SOMETHING_HERE
---				end case;
---			end if;
+			if (reset_n = '0') then 
+				state <= trig_detect;
+			else 
+				case state is 
+					when trig_detect =>
+					   if (sw(2) = '1') then state <= trig_detect;
+					   else state<= write_def; 
+					   end if;
+					when write_def =>
+					   state <= write_lt;
+					when write_lt =>
+					   if (sw(1) = '1') then state <= ready0;
+					   else state<= write_lt; 
+					   end if;
+				    when ready0 =>
+					   if (sw(0) = '0') then state <= ready0;
+					   else state<= write1; 
+					   end if;
+					when write1 =>
+					   state <= write0;
+					when write0 =>
+					   state<= ready1; 
+					when ready1 =>
+					   if (sw(0) = '1') then state <= ready1;
+					   else state<= write_lt; 
+					   end if;
+					   
+				end case;
+			end if;
 		end if;
 	end process;
 
@@ -56,7 +87,14 @@ begin
 	--		
 	-------------------------------------------------------------------------------
 	
-	-- NEED_SOMETHING_HERE
+	cw <=   "000" when state = trig_detect else
+			"000" when state = write_def else
+			"001" when state = write_lt else
+			"000" when state = ready0 else
+			"100" when state = write1 else
+			"000" when state = write0 else
+			"010" when state = ready1;
+			
 
 end Behavioral;
 

@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tsbg484-1
 
@@ -89,20 +90,21 @@ read_vhdl -library xil_defaultlib {
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2_fsm.vhdl
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/numeric_stepper.vhd
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/tdms.vhdl
+  C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/trigger_detector.vhd
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/vga.vhd
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/vga_signal_generator.vhd
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab1/Lab1_Cadet_Code_2026/Lab1_Cadet_Code_2026/video.vhdl
   C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.vhd
 }
-read_ip -quiet c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
+read_ip -quiet C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -113,6 +115,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.srcs/constrs_1/imports/lab2_code_for_cadets_2026/Lab2.xdc
+set_property used_in_implementation false [get_files C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.srcs/constrs_1/imports/lab2_code_for_cadets_2026/Lab2.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/lab2/Lab02_cadet_code/lab2_code_for_cadets_2026/lab2.srcs/utils_1/imports/synth_1/lab2.dcp
