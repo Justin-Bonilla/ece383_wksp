@@ -52,26 +52,27 @@ begin
 			if (reset_n = '0') then 
 				state <= trig_detect;
 			else 
-				case state is 
+				case state is  -- Need to add an if for trig detect
+				-- this block only happens while the trigger is true
 					when trig_detect =>
-					   if (sw(2) = '1') then state <= trig_detect;
+					   if (sw(2) = '0') then state <= trig_detect;
 					   else state<= write_def; 
 					   end if;
-					when write_def =>
+					when write_def => -- init for loop
 					   state <= write_lt;
-					when write_lt =>
-					   if (sw(1) = '1') then state <= ready0;
-					   else state<= write_lt; 
+					when write_lt => -- for loop body
+					   if (sw(1) = '0') then state <= ready0; -- last value?
+					   else state<= trig_detect;  
 					   end if;
-				    when ready0 =>
+				    when ready0 => -- wait for ready flag
 					   if (sw(0) = '0') then state <= ready0;
 					   else state<= write1; 
 					   end if;
-					when write1 =>
+					when write1 => -- write enable
 					   state <= write0;
-					when write0 =>
+					when write0 => -- write disable
 					   state<= ready1; 
-					when ready1 =>
+					when ready1 => -- wait for ready flag to be 0
 					   if (sw(0) = '1') then state <= ready1;
 					   else state<= write_lt; 
 					   end if;
@@ -87,13 +88,13 @@ begin
 	--		
 	-------------------------------------------------------------------------------
 	
-	cw <=   "000" when state = trig_detect else
-			"000" when state = write_def else
-			"001" when state = write_lt else
-			"000" when state = ready0 else
-			"100" when state = write1 else
-			"000" when state = write0 else
-			"010" when state = ready1;
+	cw <=   "010" when state = trig_detect else
+			"010" when state = write_def else
+			"011" when state = write_lt else
+			"010" when state = ready0 else
+			"110" when state = write1 else
+			"010" when state = write0 else
+			"000" when state = ready1;
 			
 
 end Behavioral;

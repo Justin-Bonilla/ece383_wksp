@@ -18,7 +18,7 @@ entity trigger_detector is
 end entity trigger_detector;
 
 architecture trigger_detector_arch of trigger_detector is
-    signal previous : unsigned(15 downto 0);
+    signal previous : unsigned(15 downto 7);
     signal G: std_logic;
     signal L: std_logic;
 begin

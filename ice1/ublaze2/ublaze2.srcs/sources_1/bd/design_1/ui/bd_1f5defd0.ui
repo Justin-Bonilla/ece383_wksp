@@ -1,0 +1,60 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.797232",
+   "Default View_TopLeft":"-147,-1027",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port usb_uart -pg 1 -lvl 8 -x 2650 -y -190 -defaultsOSRD
+preplace port DDR3_0 -pg 1 -lvl 8 -x 2650 -y -90 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -40 -y -850 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -40 -y -880 -defaultsOSRD
+preplace portBus LED -pg 1 -lvl 8 -x 2650 -y -950 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 5 -x 1580 -y 160 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 2100 -y 140 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 5 -x 1580 -y 330 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 5 -x 1580 -y 0 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 6 -x 2100 -y -30 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 4 -x 1120 -y -40 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 3 -x 840 -y -50 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 7 -x 2470 -y -110 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 350 -y -50 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 7 -x 2470 -y 120 -defaultsOSRD
+preplace inst rst_mig_7series_0_100M -pg 1 -lvl 5 -x 1580 -y -300 -defaultsOSRD
+preplace inst My_Counter_IP_0 -pg 1 -lvl 1 -x 120 -y -950 -defaultsOSRD
+preplace netloc clk_wiz_1_clk_out2 1 3 3 1000 -160 1250J -130 1810
+preplace netloc clk_wiz_1_locked 1 5 1 1880 10n
+preplace netloc mdm_1_debug_sys_rst 1 5 1 1910 -10n
+preplace netloc microblaze_0_Clk 1 0 7 0 -230 N -230 720 -220 N -220 1260 -120 1890 -160 2330
+preplace netloc mig_7series_0_mmcm_locked 1 4 1 1300 -260n
+preplace netloc mig_7series_0_ui_clk 1 4 3 1280 -140 1860J -150 2300
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 4 1 1290 -320n
+preplace netloc reset_1 1 0 6 -20J -860 N -860 N -860 960J -230 1320 -80 1840J
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 5 2 1930 -190 2270J
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 4 3 1340 -110 1850J -230 2280
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 0 7 -10 -220 N -220 700 -200 NJ -200 1310J -160 1860J -170 2310
+preplace netloc rst_mig_7series_0_100M_peripheral_aresetn 1 3 3 980 -190 1270J -150 1810
+preplace netloc sys_clock_1 1 0 2 N -850 230
+preplace netloc util_ds_buf_0_BUFG_O 1 2 3 710 -130 970J -150 1240
+preplace netloc My_Counter_IP_0_LED 1 1 7 NJ -950 NJ -950 NJ -950 NJ -950 NJ -950 NJ -950 NJ
+preplace netloc axi_smc_1_M00_AXI 1 3 5 990 -170 NJ -170 1830J -220 NJ -220 2620
+preplace netloc axi_smc_M00_AXI 1 2 6 730 -210 NJ -210 1330J -200 1820J -210 NJ -210 2600
+preplace netloc axi_uartlite_0_UART 1 3 5 950J -180 NJ -180 NJ -180 2330J -190 NJ
+preplace netloc microblaze_0_M_AXI_DC 1 5 2 1840J 220 2320
+preplace netloc microblaze_0_M_AXI_DP 1 5 2 1870J -140 2320
+preplace netloc microblaze_0_M_AXI_IC 1 5 2 1810J 230 2340
+preplace netloc microblaze_0_debug 1 4 2 1350 260 1810J
+preplace netloc microblaze_0_dlmb_1 1 5 1 1900 110n
+preplace netloc microblaze_0_ilmb_1 1 5 1 1920 130n
+preplace netloc mig_7series_0_DDR3 1 4 4 NJ -90 1860J -130 2290J -30 2630J
+preplace netloc axi_smc_M01_AXI 1 0 8 10 -240 NJ -240 NJ -240 NJ -240 1340J -190 1840J -200 NJ -200 2610
+levelinfo -pg 1 -40 120 350 840 1120 1580 2100 2470 2650
+pagesize -pg 1 -db -bbox -sgen -180 -1110 2770 400
+"
+}
+{
+   "da_axi4_cnt":"5",
+   "da_board_cnt":"5",
+   "da_clkrst_cnt":"1",
+   "da_mb_cnt":"2"
+}

@@ -151,8 +151,8 @@ generic map(
     port map( clk => clk,
            reset_n => reset_n,
            en => '1', -- was sw(0)
-           up => btn(RIGHT),
-           down => btn(LEFT),
+           up => btn(RIGHT), -- not a huge problem but buttons are wrong
+           down => btn(LEFT), -- not a huge problem but buttons are wrong
            q => time_trigger_value
            );
 
@@ -182,21 +182,23 @@ trigger.v <= unsigned(volt_trigger_value) ;
 	--cw_counter_control(1 downto 0) <= "01";
 	addCounter : counter
 generic map(
-      num_bits  => 10,
+      num_bits  => 10, -- not sure if the counter is right
       max_value => 640
     )
     port map( clk => clk,
-           reset_n => '1',--cw_counter_control(1), this was set to 1
-           ctrl => '1',--cw_counter_control(0), this was set to 1 originally to keep count going continously 
-           roll => open,
+           reset_n => cw_counter_control(1), -- active low reset  cw(1)
+           ctrl => cw_counter_control(0), -- tells counter to count cw(0) 
+           roll => sw_last_address,
            Q => writeCntr
            );
 	
     
     
      
-    sw_last_address <= '1' when (writeCntr = 1023) else -- maybe change to 640
-          '0';
+    --sw_last_address <= '1' when (writeCntr = 1023) else -- maybe change to 640 
+    --     '0';
+    -- dumb code, the counter has a roll set inside of it. Also wont ever see if it
+    -- count to 640 but im checking for 1023
     
     write_address <= writeCntr when (exSel = '0') else
               unsigned(exWrAddr);
@@ -212,7 +214,7 @@ generic map(
         reset_n => reset_n,
         threshold => trigger.v,
         ready => sw_ready,
-        monitored_signal => unsigned(ch1.current_sample),
+        monitored_signal => apply_offset(ch1.current_sample(15 downto 7)),
         crossed_trigger => sw_trigger
     );
 	
@@ -234,7 +236,7 @@ generic map(
 
 -- Audio Codec stuff goes here
 
-is_live <= '1';--switch(3) ; --  '0' simulate audio; '1' live audio
+is_live <= switch(IS_LIVE_SWITCH) ; --  '0' simulate audio; '1' live audio
                   -- should a switch go here?
                   
 
@@ -253,7 +255,7 @@ Audio_Codec : Audio_Codec_Wrapper
         R_bus_out => ch2.from_ac, -- right channel output from ADC
         scl => scl,
         sda => sda,
-        sim_live => is_live);  --  '0' simulate audio; '1' live audio
+        sim_live => '1');--is_live);  --  '0' simulate audio; '1' live audio
 
 
     -- BRAM stuff goes here

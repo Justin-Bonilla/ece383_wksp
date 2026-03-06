@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Feb 26 20:31:39 2026
+| Date         : Wed Mar  4 14:08:19 2026
 | Host         : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command      : report_drc -file lab2_drc_routed.rpt -pb lab2_drc_routed.pb -rpx lab2_drc_routed.rpx
 | Design       : lab2
@@ -24,14 +24,16 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 4
+             Checks found: 9
 +----------+----------+-----------------------------------------------------+--------+
 | Rule     | Severity | Description                                         | Checks |
 +----------+----------+-----------------------------------------------------+--------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1      |
+| PDRC-134 | Warning  | SLICE_PairEqSame_B6B5_WARN                          | 1      |
+| PDRC-136 | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 2      |
+| PDRC-138 | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
 | PDRC-144 | Warning  | SLICE_PairEqSame_C6C5_WARN                          | 1      |
-| PDRC-146 | Warning  | SLICE_PairEqSame_D6D5_WARN                          | 1      |
-| PDRC-153 | Warning  | Gated clock check                                   | 1      |
+| PDRC-153 | Warning  | Gated clock check                                   | 3      |
 +----------+----------+-----------------------------------------------------+--------+
 
 2. REPORT DETAILS
@@ -49,19 +51,44 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
 Refer to the device configuration user guide for more information.
 Related violations: <none>
 
-PDRC-144#1 Warning
-SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X144Y135 with different equations without A6 pin connected to Global Logic High.
+PDRC-134#1 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X159Y143 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
-PDRC-146#1 Warning
+PDRC-136#1 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X149Y142 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#2 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X151Y144 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X144Y135 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X149Y142 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-144#1 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X150Y139 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net control/cw_reg[2]_i_1_n_0 is a gated clock net sourced by a combinational pin control/cw_reg[2]_i_1/O, cell control/cw_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net control/cw_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin control/cw_reg[0]_i_2/O, cell control/cw_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net control/cw_reg[1]_i_1_n_0 is a gated clock net sourced by a combinational pin control/cw_reg[1]_i_1/O, cell control/cw_reg[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net control/cw_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin control/cw_reg[2]_i_2/O, cell control/cw_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

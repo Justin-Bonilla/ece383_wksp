@@ -1,0 +1,180 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Mar  4 09:20:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ip_repo/My_Counter_IP_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vitis/2024.2/Vivado/2024.2/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 393.008 ; gain = 97.602
+Command: link_design -top design_1_wrapper -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_My_Counter_IP_0_4/design_1_My_Counter_IP_0_4.dcp' for cell 'design_1_i/My_Counter_IP_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/design_1_axi_smc_1_0.dcp' for cell 'design_1_i/axi_smc_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.dcp' for cell 'design_1_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.dcp' for cell 'design_1_i/clk_wiz_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.dcp' for cell 'design_1_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.dcp' for cell 'design_1_i/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0.dcp' for cell 'design_1_i/mig_7series_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.dcp' for cell 'design_1_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_100M_0/design_1_rst_mig_7series_0_100M_0.dcp' for cell 'design_1_i/rst_mig_7series_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0.dcp' for cell 'design_1_i/util_ds_buf_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.dcp' for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 751.281 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 976 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/clk_wiz_1/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/clk_wiz_1/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0.xdc] for cell 'design_1_i/microblaze_0/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc:54]
+get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1571.883 ; gain = 581.348
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_board.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc] for cell 'design_1_i/mig_7series_0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc] for cell 'design_1_i/mig_7series_0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0_board.xdc] for cell 'design_1_i/mig_7series_0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0_board.xdc] for cell 'design_1_i/mig_7series_0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_board.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_board.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.xdc] for cell 'design_1_i/axi_uartlite_0/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc] for cell 'design_1_i/util_ds_buf_0/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/bd_a878_psr0_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/bd_a878_psr0_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr0/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/bd_a878_psr0_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr0/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_1/bd_a878_psr0_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr0/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/bd_a878_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/bd_a878_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/bd_a878_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_2/bd_a878_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/bd_a878_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/bd_a878_psr_aclk1_0_board.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/bd_a878_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk1/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/bd_0/ip/ip_3/bd_a878_psr_aclk1_0.xdc] for cell 'design_1_i/axi_smc_1/inst/clk_map/psr_aclk1/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc] for cell 'design_1_i/axi_smc_1/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:2]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:3]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:4]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:5]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:6]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:8]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:11]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:12]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:14]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:15]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:17]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:19]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:20]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:21]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:22]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:23]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:24]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:26]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:28]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:29]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:30]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:31]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:32]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:34]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:35]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:37]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:38]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:39]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:40]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:41]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:42]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:43]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:44]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:46]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:47]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc:48]
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_0/smartconnect.xdc] for cell 'design_1_i/axi_smc_1/inst'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_100M_0/design_1_rst_mig_7series_0_100M_0_board.xdc] for cell 'design_1_i/rst_mig_7series_0_100M/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_100M_0/design_1_rst_mig_7series_0_100M_0_board.xdc] for cell 'design_1_i/rst_mig_7series_0_100M/U0'
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_100M_0/design_1_rst_mig_7series_0_100M_0.xdc] for cell 'design_1_i/rst_mig_7series_0_100M/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_rst_mig_7series_0_100M_0/design_1_rst_mig_7series_0_100M_0.xdc] for cell 'design_1_i/rst_mig_7series_0_100M/U0'
+Parsing XDC File [C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.srcs/constrs_1/imports/ice2/ice2.xdc]
+Finished Parsing XDC File [C:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.srcs/constrs_1/imports/ice2/ice2.xdc]
+Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
+Finished Parsing XDC File [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
+INFO: [Project 1-1714] 106 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'design_1_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf 
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'design_1_My_Counter_IP_0_4_lec10' instantiated as 'design_1_i/My_Counter_IP_0/U0/My_Counter_IP_slave_lite_v1_0_S00_AXI_inst/counter' [c:/Users/C27Justin.Bonilla/ece383/ece383_wksp/ice1/ublaze2/ublaze2.gen/sources_1/bd/design_1/ipshared/6663/hdl/My_Counter_IP_slave_lite_v1_0_S00_AXI.vhd:659]
+INFO: [Project 1-1687] 48 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1571.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 384 instances were transformed.
+  IOBUFDS_DIFF_OUT_INTERMDISABLE => IOBUFDS_DIFF_OUT_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 88 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 231 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 45 instances
+
+31 Infos, 45 Warnings, 1 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1571.883 ; gain = 1178.875
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'design_1_i/My_Counter_IP_0/U0/My_Counter_IP_slave_lite_v1_0_S00_AXI_inst/counter' of type 'design_1_My_Counter_IP_0_4_lec10' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+INFO: [Project 1-461] DRC finished with 1 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1571.883 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+36 Infos, 45 Warnings, 1 Critical Warnings and 2 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  4 09:22:16 2026...
