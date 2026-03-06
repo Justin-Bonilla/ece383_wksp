@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Mar  4 14:08:25 2026
+| Date         : Fri Mar  6 09:02:59 2026
 | Host         : C27-5CG3121F3M running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lab2_methodology_drc_routed.rpt -pb lab2_methodology_drc_routed.pb -rpx lab2_methodology_drc_routed.rpx
 | Design       : lab2
@@ -23,14 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 231
+             Checks found: 227
 +-----------+------------------+---------------------------------------------------+--------+
 | Rule      | Severity         | Description                                       | Checks |
 +-----------+------------------+---------------------------------------------------+--------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                       | 222    |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin         | 2      |
-| LUTAR-1   | Warning          | LUT drives async reset alert                      | 2      |
-| TIMING-20 | Warning          | Non-clocked latch                                 | 3      |
+| TIMING-20 | Warning          | Non-clocked latch                                 | 1      |
 | XDCC-2    | Warning          | Scoped Non-Timing constraint/property overwritten | 1      |
 | LATCH-1   | Advisory         | Existing latches in the design                    | 1      |
 +-----------+------------------+---------------------------------------------------+--------+
@@ -1157,27 +1156,7 @@ Invalid primary clock on hierarchical pin
 A primary clock datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_in1 is created on an inappropriate internal pin datapath/video_inst/mmcm_adv_inst_display_clocks/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>
 
-LUTAR-1#1 Warning
-LUT drives async reset alert  
-LUT cell control/cw_reg[0]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) control/cw_reg[0]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#2 Warning
-LUT drives async reset alert  
-LUT cell control/cw_reg[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) control/cw_reg[1]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
 TIMING-20#1 Warning
-Non-clocked latch  
-The latch control/cw_reg[0] cannot be properly analyzed as its control pin control/cw_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch control/cw_reg[1] cannot be properly analyzed as its control pin control/cw_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
 Non-clocked latch  
 The latch control/cw_reg[2] cannot be properly analyzed as its control pin control/cw_reg[2]/G is not reached by a timing clock
 Related violations: <none>
@@ -1191,7 +1170,7 @@ Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 3 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 1 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

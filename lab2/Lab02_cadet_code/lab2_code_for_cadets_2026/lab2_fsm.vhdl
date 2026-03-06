@@ -39,12 +39,21 @@ architecture Behavioral of lab2_fsm is
 	);
 	signal state: state_type;
 	
-
+	
+    
+    
+    
+    
+    
+    
 begin
 
+    
 	-------------------------------------------------------------------------------
 	--		SW		meaning
-	--		
+	--		sw(0) <= sw_ready;
+    --      sw(1) <= sw_last_address;
+    --      sw(2) <= sw_trigger;
 	-------------------------------------------------------------------------------
 	state_proces: process(clk)  
 	begin
@@ -85,16 +94,21 @@ begin
 	-------------------------------------------------------------------------------
 	--  CW output table
 	--		CW		meaning
-	--		
+	--		cw_counter_control <= cw(1 downto 0);
+	--      cw(1) is reset_n for counter
+    --      cw(0) is what tells the counter to count
+    --      cw_write_en <= cw(2);
+    --      
 	-------------------------------------------------------------------------------
 	
-	cw <=   "010" when state = trig_detect else
-			"010" when state = write_def else
+	cw <=   "000" when state = trig_detect else
+			"000" when state = write_def else
 			"011" when state = write_lt else
 			"010" when state = ready0 else
 			"110" when state = write1 else
 			"010" when state = write0 else
 			"000" when state = ready1;
+    
 			
 
 end Behavioral;

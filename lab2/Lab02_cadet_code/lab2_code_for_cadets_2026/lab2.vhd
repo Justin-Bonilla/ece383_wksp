@@ -22,8 +22,16 @@ use UNIMACRO.vcomponents.all;
  
 architecture behavior of lab2 is
 
+    
+    
+    
 	signal sw: std_logic_vector(2 downto 0);
+--	attribute mark_debug of sw : signal is "true";
+--    attribute keep of sw : signal is "true";
+    
 	signal cw: std_logic_vector (2 downto 0);
+--	attribute mark_debug of cw : signal is "true";
+--    attribute keep of cw : signal is "true";
 
  component lab2_datapath
     Port ( clk : in  STD_LOGIC;
