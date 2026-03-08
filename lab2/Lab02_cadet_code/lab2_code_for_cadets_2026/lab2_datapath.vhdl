@@ -64,7 +64,7 @@ architecture lab2_datapath_arch of lab2_datapath is
     signal sw_trigger: std_logic;
     
     signal cw_counter_control: std_logic_vector(1 downto 0);
-    signal cw_write_en: std_logic := '1'; -- this was originally 1 
+    signal cw_write_en: std_logic;-- := '1'; -- this was originally 1 
     
     
     signal counter_reset : std_logic;
@@ -212,6 +212,16 @@ generic map(
         monitored_signal => apply_offset(ch1.current_sample(15 downto 7)),
         crossed_trigger => sw_trigger
     );
+    
+--    trig_detect_ch2 : trigger_detector
+--    port map (
+--        clk  => clk,
+--        reset_n => reset_n,
+--        threshold => trigger.v,
+--        ready => sw_ready,
+--        monitored_signal => apply_offset(ch2.current_sample(15 downto 7)),
+--        crossed_trigger => sw_trigger
+--    );
 	
 	-------------------------------------------------------------------------------
 	-- Instantiate the video driver from Lab1 - should integrate smoothly

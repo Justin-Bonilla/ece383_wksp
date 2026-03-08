@@ -29,13 +29,9 @@ end lab2_fsm;
 architecture Behavioral of lab2_fsm is
 
 	type state_type is (
-	trig_detect,
-	write_def,
-	write_lt,
-	ready0,
-	write1,
-	write0,
-	ready1
+	wait_for_trigger,
+	wait_for_ready,
+	save_sample
 	);
 	signal state: state_type;
 	
@@ -59,31 +55,21 @@ begin
 	begin
 		if (rising_edge(clk)) then
 			if (reset_n = '0') then 
-				state <= trig_detect;
+				state <= wait_for_trigger;
 			else 
-				case state is  -- Need to add an if for trig detect
-				-- this block only happens while the trigger is true
-					when trig_detect =>
-					   if (sw(2) = '0') then state <= trig_detect;
-					   else state<= write_def; 
+				case state is  
+				
+					when wait_for_trigger =>
+					   if (sw(2) = '1') then state <= wait_for_ready;
+					   else state<= wait_for_trigger; 
 					   end if;
-					when write_def => -- init for loop
-					   state <= write_lt;
-					when write_lt => -- for loop body
-					   if (sw(1) = '0') then state <= ready0; -- last value?
-					   else state<= trig_detect;  
+					when wait_for_ready => -- 
+					   if (sw(0) = '1') then state <= save_sample;
+					   else state <= wait_for_ready;
 					   end if;
-				    when ready0 => -- wait for ready flag
-					   if (sw(0) = '0') then state <= ready0;
-					   else state<= write1; 
-					   end if;
-					when write1 => -- write enable
-					   state <= write0;
-					when write0 => -- write disable
-					   state<= ready1; 
-					when ready1 => -- wait for ready flag to be 0
-					   if (sw(0) = '1') then state <= ready1;
-					   else state<= write_lt; 
+					when save_sample => -- for loop body
+					   if (sw(1) = '1') then state <= wait_for_trigger; -- last value?
+					   else state<= wait_for_ready;  
 					   end if;
 					   
 				end case;
@@ -101,13 +87,10 @@ begin
     --      
 	-------------------------------------------------------------------------------
 	
-	cw <=   "000" when state = trig_detect else
-			"000" when state = write_def else
-			"011" when state = write_lt else
-			"010" when state = ready0 else
-			"110" when state = write1 else
-			"010" when state = write0 else
-			"000" when state = ready1;
+	cw <=   "000" when state = wait_for_trigger else
+			"010" when state = wait_for_ready else
+			"111" when state = save_sample;
+			
     
 			
 
